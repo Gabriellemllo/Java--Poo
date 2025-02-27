@@ -1,9 +1,9 @@
 public class Filme {
-    public string nomeFilme;
-    public string genero;
-    public double duracao;
+    public String nomeFilme;
+    public String genero;
+    public Double duracao;
 
-    public Filme(string nomeFilme, string genero, double duracao){
+    public Filme(String nomeFilme, String genero, Double duracao){
         this.nomeFilme = nomeFilme;
         this.genero = genero;
         this.duracao = duracao;

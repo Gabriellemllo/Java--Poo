@@ -1,9 +1,9 @@
 public class Professor {
-    public string nome;
-    public double ra;
-    public string disciplina;
+    public String nome;
+    public Double ra;
+    public String disciplina;
 
-    public Professor(string nome, double nota, double ra, string disciplina){
+    public Professor(String nome, Double ra, String disciplina){
     this.nome = nome;
     this.ra = ra;
     this.disciplina = disciplina;
