@@ -22,18 +22,21 @@ public class Main {
             String autor = sc.nextLine();
             System.out.println("Digite o ano de publicação do livro: ");
             int ano = sc.nextInt();
-            System.out.println("------------------------");
+            System.out.println("                   ");
             sc.nextLine(); 
 
             Biblioteca livro = new Biblioteca(titulo, autor, ano);
             livros.add(livro);
         }
 
-        System.out.println("\nInformações dos livros cadastrados:");
+        System.out.println("Livros cadastrados:");
+        System.out.println();
+
         for (Biblioteca livro : livros) {
             livro.bibliotecaInfo();
-            System.out.println("------------------------");
+            System.out.println();
         }
+        
         sc.close();
     }
 }
