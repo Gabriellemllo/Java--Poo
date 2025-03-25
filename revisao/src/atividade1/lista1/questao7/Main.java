@@ -10,6 +10,24 @@ public class Main {
     PerfilUsuario usuario2 = new PerfilUsuario("@i7ellegx", "Rec/PE 19 anos  Si/Unicap", 650);
     PerfilUsuario usuario3 = new PerfilUsuario("@joao_levi07", "Rio de Janeiro/RJ MedVet/UFRJ" , 906);
 
+    try{
+        usuario1.setSeguidores(-1);
+    }catch(Exception e){
+        System.out.println();
+    }
+
+    try{
+        usuario2.setSeguidores(-1);
+    }catch(Exception e){
+        System.out.println();
+    }
+
+    try{
+        usuario3.setSeguidores(-1);
+    }catch(Exception e){
+        System.out.println();
+    }
+
     usuario1.exibirPerfil();
     System.out.println();
 

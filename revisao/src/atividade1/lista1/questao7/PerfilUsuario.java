@@ -5,22 +5,22 @@ package lista1.questao7;
 // Crie perfis para três usuários e mostre os detalhes.
 
 public class PerfilUsuario {
-    private String Usuario;
+    private String usuario;
     private String bio;
-    private int Seguidores;
+    private int seguidores;
 
-    public PerfilUsuario(String Usuario, String bio, int Seguidores) {
-        this.Usuario = Usuario;
+    public PerfilUsuario(String usuario, String bio, int seguidores) {
+        this.usuario = usuario;
         this.bio = bio;
-        this.Seguidores = Seguidores;
+        this.seguidores = seguidores;
     }
 
     public String getUsuario() {
-        return Usuario;
+        return usuario;
     }
 
     public void setUsuario(String Usuario) {
-        this.Usuario = Usuario;
+        this.usuario = Usuario;
     }
 
     public String getBio() {
@@ -32,11 +32,14 @@ public class PerfilUsuario {
     }
 
     public int getSeguidores() {
-        return Seguidores;
+        return seguidores;
     }
 
-    public void setSeguidores(int Seguidores) {
-        this.Seguidores = Seguidores;
+    public void setSeguidores(int seguidores)throws Exception {
+        if (seguidores < 0) {
+            throw new Exception("Número de seguidores não pode ser negativo!");
+        }
+        this.seguidores = seguidores;
     }
 
     public void exibirPerfil() {

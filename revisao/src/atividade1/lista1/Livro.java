@@ -4,13 +4,13 @@ package lista1;
 // Crie uma classe Livro com atributos para armazenar o título.
 // autor e ano de publicação. Em seguida, simule a adição de três livros ao sistema, mostrando suas informações.
 
-public class Biblioteca {
+public class Livro {
     private String titulo;
     private String autor;
     private int ano;
     
 
-    public Biblioteca(String titulo,  String autor, int ano){
+    public Livro(String titulo,  String autor, int ano){
     this.titulo = titulo;
     this.autor = autor;
     this.ano = ano;
@@ -41,10 +41,10 @@ public class Biblioteca {
         this.ano = ano;
     }
 
-    public void bibliotecaInfo(){
+    public void LivroInfo(){
         System.out.println("Título do livro :"+ getTitulo()); 
         System.out.println("Autor : " + getAutor());
-        System.out.println("Ano de publicação" + getAno());  
+        System.out.println("Ano de publicação :" + getAno());  
     }
 
 }

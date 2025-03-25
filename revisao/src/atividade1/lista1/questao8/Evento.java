@@ -32,8 +32,11 @@ public class Evento {
         return local;
     }
 
-    public void setLocal(String local) {
-        this.local = local;
+    public void setLocal(String local)throws Exception {
+        if (!local.equals("Recife")) { 
+            throw new Exception("Local não pode ser diferente de Recife");
+        }
+        this.local = local ;
     }
 
     public void exibirEvento() {

@@ -22,7 +22,7 @@ public class App {
             System.out.println(nome + "é obrigatório!");
         }
         if(canVote){
-            System.out.println(name + "pvf vote consciente");
+            System.out.println(nome + "pvf vote consciente");
         }
     
     }

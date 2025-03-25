@@ -10,34 +10,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Biblioteca> livros = new ArrayList<>();
+        ArrayList<Livro> livros = new ArrayList<>();
         System.out.println("Cadastro de Livros");
         System.out.println("------------------------");
 
         for (int i = 0; i < 3; i++) {
             System.out.println((i + 1) + "º livro:");
-            System.out.println("Digite o título do livro: ");
+            System.out.print("Digite o título do livro: ");
             String titulo = sc.nextLine();
-            System.out.println("Digite o autor do livro: ");
+            System.out.print("Digite o autor do livro: ");
             String autor = sc.nextLine();
-            System.out.println("Digite o ano de publicação do livro: ");
+            System.out.print("Digite o ano de publicação do livro: ");
             int ano = sc.nextInt();
-            System.out.println("                   ");
             sc.nextLine(); 
 
-            Biblioteca livro = new Biblioteca(titulo, autor, ano);
+            Livro livro = new Livro(titulo, autor, ano);
             livros.add(livro);
+            System.out.println();
         }
 
         System.out.println("Livros cadastrados:");
         System.out.println();
 
-        for (Biblioteca livro : livros) {
-            livro.bibliotecaInfo();
+        for (Livro livro : livros) {
+            livro.LivroInfo();
             System.out.println();
         }
-        
+
         sc.close();
     }
 }
-  
