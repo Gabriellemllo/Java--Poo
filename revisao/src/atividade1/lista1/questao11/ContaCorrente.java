@@ -1,4 +1,4 @@
-package atividade1.lista1.questao11;
+package lista1.questao11;
 
 //Classe ContaCorrente Um banco digital deseja oferecer aos seus clientes uma experiência simplificada através de uma conta corrente 
 //que permita depósitos, saques, transferências e consulta de saldo. Para atender a essa necessidade, 
@@ -50,33 +50,31 @@ public class ContaCorrente {
     }
 
 
-    //depositar(double valor): aumenta o saldo.
+    
     public void depositar(double valor) {
-        this.saldo += valor;
+        saldo += valor;
     }
 
-    //sacar(double valor): diminui o saldo, se houver saldo suficiente.
     public void sacar(double valor)throws Exception {
-        if (this.saldo < valor) {
+        if (saldo < valor) {
             throw new Exception("Saldo insuficiente");
         }
         
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
+        if (saldo >= valor) {
+            saldo -= valor;
         }
     }
 
-    //transferir(ContaCorrente destino, double valor): transfere valor de uma conta para outra.
     public void transferir(ContaCorrente destino, double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
+        if (saldo >= valor) {
+            saldo -= valor;
             destino.depositar(valor);
         }
     }
 
-    //exibirSaldo(): mostra o saldo atual da conta.
+   
     public void exibirSaldo() {
-        System.out.println("Saldo atual: " + this.saldo);
+        System.out.println("Saldo atual: " + saldo);
     }
 
 }

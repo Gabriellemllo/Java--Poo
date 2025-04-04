@@ -21,7 +21,10 @@ public class Livro {
         return titulo;
     }
     
-    public void setTitulo(String titulo){
+    public void setTitulo(String titulo)throws Exception{
+        if(titulo == null || titulo.isEmpty()){
+            throw new Exception("O título não pode ser nulo");
+        }
         this.titulo = titulo;
     }
 

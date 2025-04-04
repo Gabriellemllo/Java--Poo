@@ -14,6 +14,7 @@ public class Main {
         System.out.println("Cadastro de Livros");
         System.out.println("------------------------");
 
+
         for (int i = 0; i < 3; i++) {
             System.out.println((i + 1) + "º livro:");
             System.out.print("Digite o título do livro: ");
@@ -27,6 +28,12 @@ public class Main {
             Livro livro = new Livro(titulo, autor, ano);
             livros.add(livro);
             System.out.println();
+        }
+
+        try{
+            livros.get(0).setTitulo("");
+        }catch(Exception e){
+            System.out.println("O título não pode ser nulo");
         }
 
         System.out.println("Livros cadastrados:");

@@ -9,6 +9,12 @@ public class Main {
         Veiculo veiculo2 = new Veiculo("MZD0710", "Civic", 2024);
         Veiculo veiculo3 = new Veiculo("PAL1035", "Hb20", 2022);
 
+        try {
+            veiculo1.setAno(0);
+        } catch (Exception e) {
+            System.out.println("O ano não pode ser negativo");
+        }
+
         veiculo1.exibirVeiculo();
         System.out.println();
 

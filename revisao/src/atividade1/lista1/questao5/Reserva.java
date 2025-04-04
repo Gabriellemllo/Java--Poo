@@ -21,7 +21,10 @@ public class Reserva {
     }
 
 
-    public void setNomeHospede(String nomeHospede) {
+    public void setNomeHospede(String nomeHospede)throws Exception {
+        if (nomeHospede == null || nomeHospede.trim().isEmpty()) {
+            throw new Exception("Nome do hóspede não pode ser nulo ou vazio!");
+        }
         this.nomeHospede = nomeHospede;
     }   
 

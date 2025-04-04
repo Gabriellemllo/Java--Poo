@@ -15,6 +15,7 @@ public class Aluno{
         this.serie = serie;
     
     }
+    
     public String getNome(){
     return nome;
     }
@@ -27,7 +28,10 @@ public class Aluno{
     return idade;
     }
 
-    public void setIdade(int idade){
+    public void setIdade(int idade)throws Exception{
+        if(idade < 0){
+            throw new Exception("A idade não pode ser negativa");
+        }
     this.idade = idade;
     }
 

@@ -13,6 +13,11 @@ public class Main {
         Funcionario funcionario2 = new Funcionario("Carlos", "Jornalismo", 3.500);
         Funcionario funcionario3 = new Funcionario("Elcio", "Marketing", 3.500);
 
+        try {
+            funcionario1.setNome(""); 
+        } catch (Exception e) {
+            System.out.println("o nome não pode ser nulo! ");
+        }
         
         funcionario1.exibirFuncionario();
         System.out.println();

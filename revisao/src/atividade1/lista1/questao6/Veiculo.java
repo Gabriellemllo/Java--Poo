@@ -18,7 +18,10 @@ public class Veiculo {
         return placa;
     }
 
-    public void setPlaca(String placa) {
+    public void setPlaca(String placa)throws Exception {
+        if (placa == null || placa.trim().isEmpty()) {
+            throw new Exception();
+        }
         this.placa = placa;
     }
 

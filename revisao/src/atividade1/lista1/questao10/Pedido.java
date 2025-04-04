@@ -9,6 +9,9 @@ public class Pedido {
     public String descricaoItens;
     public double valorTotal;
 
+    public Pedido() {
+    }
+    
     public Pedido(String numeroPedido, String descricaoItens, double valorTotal) {
         this.numeroPedido = numeroPedido;
         this.descricaoItens = descricaoItens;

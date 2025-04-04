@@ -7,6 +7,12 @@ public class Main {
         Aluno aluno2 = new Aluno("Maria Gabrielle", 16, 3);
         Aluno aluno3 = new Aluno("Maria Fernamda ", 12, 7);
 
+        try {
+            aluno1.setNome(""); 
+        } catch (Exception e) {
+            System.out.println("O nome não pode ser nulo! ");
+        }
+        
         System.out.println( "Lista de Alunos:");
         aluno1.exibirAluno();
 

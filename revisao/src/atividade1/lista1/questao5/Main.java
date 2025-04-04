@@ -10,6 +10,12 @@ public class Main {
         Reserva reserva2 = new Reserva("Gabi", "Duplo", (short) 5);
         Reserva reserva3 = new Reserva("Pedro", "Suíte", (short) 2);
 
+        try {
+            reserva1.setNomeHospede("");
+        } catch (Exception e) {
+            System.out.println("O nome do hóspede não pode ser nulo !");
+        }
+
         reserva1.exibirInformacoes();
         System.out.println();
         reserva2.exibirInformacoes();

@@ -27,7 +27,10 @@ public class Produto {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(double preco)throws Exception {
+        if(preco < 0){
+            throw new Exception("O preço não pode ser negativo");
+        }
         this.preco = preco;
     }
 
