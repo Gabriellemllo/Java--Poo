@@ -1,4 +1,4 @@
-public class Cuidador{
+public class Cuidador implements CuidadorAnimal{
     private int anosExperiencia;
     private String especialidade;
     private String turno;
@@ -9,6 +9,8 @@ public class Cuidador{
     }
 
     public Cuidador(int anosExperiencia, String especialidade, String turno, String cpf) {
+        //Composição ( a classe só existe agora nesse construtor)
+        this.animalCuidado =  new Animal(nome,idade);
         this.anosExperiencia = anosExperiencia;
         this.especialidade = especialidade;
         this.turno = turno;
@@ -58,3 +60,11 @@ public class Cuidador{
     }
 
 }
+
+
+// Interface é um tipo de descrição onde eu vou pegar a minha classe e vou descrever os meus métodos!1
+public interface CuidadorAnimal{
+    void cuidarDeAnimal(Animal animal);
+}
+
+
