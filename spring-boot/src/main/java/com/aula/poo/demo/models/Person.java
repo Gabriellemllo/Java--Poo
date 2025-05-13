@@ -14,5 +14,8 @@ import lombok.*;
 public class Person {
     @Id
     @GeneratedValue
-    Long id;
+    private Long id;
+    private String  name;
+    private short age;
+
 }
